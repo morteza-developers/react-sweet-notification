@@ -14,7 +14,7 @@ yarn add react-sweet-notification
 ## Usage
 
 ```jsx
-import { NotifyContainer, toast, confirm } from "react-sweet-notification";
+import { NotifyProvider, toast, confirm } from "react-sweet-notification";
 
 function App() {
   const showToast = () => {
@@ -25,7 +25,7 @@ function App() {
   };
   return (
     <div>
-      <NotifyContainer />
+      <NotifyProvider />
       <button onClick={showToast}>toast me</button>
       <button onClick={showConfirm}>confirm</button>
     </div>
