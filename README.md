@@ -2,7 +2,6 @@
 
 A Beautiful, Responsive , Lightweight ,Easy to use, Accessible (Wai-Aria) Replacement For React Notify Boxes Zero Dependencies
 
-
 ## Install
 
 ```bash
@@ -17,21 +16,20 @@ yarn add react-sweet-notification
 import { NotifyProvider, toast, confirm } from "react-sweet-notification";
 
 export default function App() {
-
   const showSuccessToast = () => {
-    toast("hi my friend it is a success toast");
+    toast("hi my friend it is a success toast", { status: "success" });
   };
 
   const showErrorToast = () => {
-    toast("hi my friend it is a error toast" ,{ status: "error" });
+    toast("hi my friend it is a error toast", { status: "error" });
   };
 
   const showWarningToast = () => {
-    toast("hi my friend it is a warning toast" ,{ status: "warning" });
+    toast("hi my friend it is a warning toast", { status: "warning" });
   };
 
   const showInfoToast = () => {
-    toast("hi my friend it is a info toast" ,{ status: "info" });
+    toast("hi my friend it is a info toast", { status: "info" });
   };
 
   const showConfirm = () => {
