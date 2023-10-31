@@ -20,8 +20,8 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  font-weight: var(--font-500);
-  font-size: var(--font-size-16);
+  font-weight: 500;
+  font-size: 16px;
 }
 .sweet-dialog-container {
   display: flex;
@@ -31,10 +31,10 @@
   overflow-y: visible;
   overflow-x: visible;
   max-height: 80vh;
-  padding: var(--padding-15);
+  padding: 15px;
   border-radius: 12px;
   width: 100%;
-  background-color: var(--color-back-ground-card);
+  background-color: #fff;
   animation-name: animate_main;
 }
 
@@ -91,7 +91,7 @@
 .sweet-dialog-sign > span {
   height: 3px;
   width: 20px;
-  background: var(--color-card);
+  background: #8b8b8b;
   border-radius: 5px;
 }
 
@@ -130,7 +130,7 @@
     flex-direction: column;
     width: 100%;
     bottom: 0;
-    background-color: var(--color-back-ground-card);
+    background-color: #fff;
     animation-name: animate_main_mobile;
   }
 }

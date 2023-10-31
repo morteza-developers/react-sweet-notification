@@ -5,8 +5,8 @@
   appearance: none;
   border: none;
   height: 0.25em;
-  color: var(--color-secondary) !important;
-  background-color: rgba(var(--color-primary 33, 150, 243), 0.12) !important;
+  color: #1EBEC2 !important;
+  background-color:#6549d5;
   font-size: 16px;
 }
 
