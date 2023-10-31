@@ -107,6 +107,7 @@
   border-radius: 5px;
 }
 .sweet-toast-close-btn {
+  font-size: 20px;
   background: transparent;
   border: none;
   outline: none;

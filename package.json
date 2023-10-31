@@ -10,20 +10,18 @@
   ],
   "description": "Performant, flexible and extensible fetch library for React Hooks",
   "homepage": "https://github.com/morteza-developers/react-sweet-notification",
-  "author": "Morteza KHedmatgozar <morteza.mk14@gmail.com>",
+  "author": "Morteza Khedmatgozar <morteza.mk14@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/morteza-developers/react-sweet-notification"
-  },
-  "dependencies": {
-    "react-dom": "^18.2.0",
-    "react": "^18.2.0"
   },
   "peerDependencies": {
     "react-dom": "^16.8.0 || ^17 || ^18",
     "react": "^16.8.0 || ^17 || ^18"
   },
   "devDependencies": {
+    "react-dom": "^18.2.0",
+    "react": "^18.2.0",
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.17",
     "@babel/preset-env": "^7.23.2",
@@ -69,6 +67,7 @@
     "toast",
     "react-component",
     "sweet",
-    "easy"
+    "easy",
+    "react-sweet-notification"
   ]
 }
