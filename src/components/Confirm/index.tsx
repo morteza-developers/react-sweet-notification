@@ -1,4 +1,4 @@
-import styles from "./styles.module.css";
+import "./styles.css";
 import { IConfirmListener } from "../../types";
 import { useState } from "react";
 import Dialog from "../Dialog";
@@ -78,7 +78,7 @@ function Confirm({
   return (
     <Dialog
       actions={
-        <div className={styles.action}>
+        <div className="confirm-action">
           {showOkButton && (
             <ButtonConfirm
               loading={loading}
@@ -105,7 +105,7 @@ function Confirm({
       open
       onClose={handleClose}
     >
-      {content && <div className={styles.content}>{content}</div>}
+      {content && <div className="confirm-content">{content}</div>}
     </Dialog>
   );
 }

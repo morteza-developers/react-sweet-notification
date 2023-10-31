@@ -1,12 +1,12 @@
 import { CSSProperties, FC } from "react";
-import styles from "./LinearProgress.module.css";
+import "./LinearProgress.css";
 
 type PropsTypes = {
   style?: CSSProperties;
 };
 
 const LinearProgressConfirm: FC<PropsTypes> = ({ style }) => {
-  return <progress style={style} className={styles.main} />;
+  return <progress style={style} className="sweet-progress-main" />;
 };
 
 export default LinearProgressConfirm;

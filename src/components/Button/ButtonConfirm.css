@@ -1,8 +1,8 @@
-.container {
+.toast-btn-container {
     display: flex;
     flex-direction: column;
   }
-  .main {
+  .toast-btn-main {
     width: 100%;
     border: none;
     font-size: 14px;
@@ -17,24 +17,24 @@
     align-items: center;
     justify-content: center;
   }
-  .main:disabled {
+  .toast-btn-main:disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
-  .rectangle {
+  .toast-btn-rectangle {
     border-radius: var(--radius-8);
   }
-  .circle {
+  .toast-btn-circle {
     border-radius: 50% !important;
     padding: 0px !important;
   }
-  .oval {
+  .toast-btn-oval {
     border-radius: 32px !important;
   }
-  .fullWidth {
+  .toast-btn-fullWidth {
     width: 100%;
   }
-  .large {
+  .toast-btn-large {
     height: 46px;
     min-width: 46px;
     min-height: 46px;
@@ -42,7 +42,7 @@
     padding: 0 20px;
     font-size: 18px;
   }
-  .medium {
+  .toast-btn-medium {
     height: 42px;
     min-width: 42px;
     min-height: 42px;
@@ -51,7 +51,7 @@
     font-size: 16px;
     font-weight: 500;
   }
-  .small {
+  .toast-btn-small {
     height: 38px;
     min-height: 38px;
     min-width: 38px;
@@ -62,7 +62,7 @@
   }
 
   
-  .primary {
+  .toast-btn-primary {
     color: var(--color-primary);
     background: transparent;
     box-shadow: none;
@@ -71,7 +71,7 @@
 
   
   /* //error styless */
-  .error {
+  .toast-btn-error {
     color: var(--color-danger);
     background: transparent;
     box-shadow: none;
@@ -81,7 +81,7 @@
   
   /* warning  styless */
   
-  .warning {
+  .toast-btn-warning {
     color: var(--color-warning);
     background: transparent;
     box-shadow: none;
@@ -92,7 +92,7 @@
   
   /* secondary stylesss */
   
-  .secondary {
+  .toast-btn-secondary {
     color: var(--color-secondary);
     background: transparent;
     box-shadow: none;
@@ -101,7 +101,7 @@
 
   
   /* info styless */
-  .info {
+  .toast-btn-info {
     color: var(--color-info);
     background: transparent;
     box-shadow: none;
@@ -111,7 +111,7 @@
   
   /* success  styless */
   
-  .success {
+  .toast-btn-success {
     color: var(--color-success);
     background: transparent;
     box-shadow: none;

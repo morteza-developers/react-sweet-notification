@@ -1,8 +1,7 @@
 import { useEffect, FC } from "react";
-import styles from "./Toast.module.css";
+import "./Toast.css";
 import { IToastListener } from "../../types";
 import { closeToast } from "index";
-
 
 const Toast: FC<IToastListener> = ({
   content,
@@ -40,20 +39,20 @@ const Toast: FC<IToastListener> = ({
     onClose(id);
   };
   return (
-    <li className={styles.root}>
-      {activeBackdrop && <div className={styles.back_drop}></div>}
-      <div className={`${styles[status]} ${styles.main}`}>
-        <div className={styles.place_holder}>
+    <li className="sweet-toast-root">
+      {activeBackdrop && <div className="sweet-toast-back-drop"></div>}
+      <div className={`sweet-toast-${status} sweet-toast-main`}>
+        <div className="sweet-toast-place_holder">
           {!isDisableCloseButton && (
-            <button onClick={removeToast} className={styles.close_btn}>
+            <button onClick={removeToast} className="sweet-toast-close-btn">
               x
             </button>
           )}
-          <span className={styles.title}>{content}</span>
+          <span className="sweet-toast-title">{content}</span>
         </div>
         {isActiveTimer && (
           <span
-            className={`${styles[`${status}_line`]} ${styles.line}`}
+            className={`sweet-toast-${status}-line sweet-toast-line`}
             style={{
               animationDuration: `${snakeHideDuration / 1000}s`,
             }}

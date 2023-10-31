@@ -1,4 +1,4 @@
-.main {
+.sweet-toast-main {
   position: relative;
   border: none;
   outline: none;
@@ -16,15 +16,15 @@
   max-width: 360px;
 }
 
-.place_holder {
+.sweet-toast-place-holder {
   display: flex;
   align-items: center;
 }
-.title {
+.sweet-toast-title {
   padding: 8px;
   font-size: 14px;
 }
-.root {
+.sweet-toast-root {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +36,7 @@
   font-weight: 500;
   margin: 0px;
 }
-.success::before {
+.sweet-toast-success::before {
   content: "";
   background: #46d300;
   border-right: 4px solid #008b33;
@@ -52,7 +52,7 @@
   border-radius: 5px;
 }
 
-.error::before {
+.sweet-toast-error::before {
   content: "";
   background: #fc1515;
   border-right: 4px solid rgb(160, 32, 0);
@@ -67,11 +67,11 @@
   transition: opacity 0.2s ease-in-out;
   border-radius: 5px;
 }
-.info {
+.sweet-toast-info {
   color: #000;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.info::before {
+.sweet-toast-info::before {
   border-right: 4px solid #d7d7d7;
   background: #ffffff;
   content: "";
@@ -87,7 +87,7 @@
   border-radius: 5px;
 }
 
-.warning::before {
+.sweet-toast-warning::before {
   content: "";
 
   background: #ffc700;
@@ -104,7 +104,7 @@
   transition: opacity 0.2s ease-in-out;
   border-radius: 5px;
 }
-.close_btn {
+.sweet-toast-close-btn {
   background: transparent;
   border: none;
   outline: none;
@@ -114,20 +114,20 @@
   cursor: pointer;
   color: #fff;
 }
-.success_line {
+.sweet-toast-success-line {
   background: #1b5c33f2;
 }
-.error_line {
+.sweet-toast-error-line {
   background: rgb(128, 26, 0);
 }
-.info_line {
+.sweet-toast-info-line {
   background: #484848;
 }
-.warning_line {
+.sweet-toast-warning-line {
   background: rgb(250, 234, 10);
 }
 
-.back_drop {
+.sweet-toast-back-drop {
   z-index: 8;
   position: fixed;
   height: 100%;
@@ -138,7 +138,7 @@
   right: 0;
   background: #1d1d1d31;
 }
-.line {
+.sweet-toast-line {
   margin-bottom: -2px;
   animation-name: toast_animation_line;
   animation-timing-function: linear;
@@ -173,10 +173,10 @@
 }
 
 @media screen and (max-width: 767px) {
-  .main {
+  .sweet-toast-main {
     width: 100%;
   }
-  .root {
+  .sweet-toast-root {
     margin: 0px 5px;
   }
 }

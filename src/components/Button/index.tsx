@@ -5,17 +5,11 @@ import {
   ReactNode,
 } from "react";
 
-import styles from "./ButtonConfirm.module.css";
+import "./ButtonConfirm.css";
 import LinearProgressConfirm from "../LinearProgress";
 
 type PropsTypes = {
-  color?:
-    | "primary"
-    | "error"
-    | "warning"
-    | "secondary"
-    | "info"
-    | "success";
+  color?: "primary" | "error" | "warning" | "secondary" | "info" | "success";
   shape?: "circle" | "rectangle" | "oval";
   size?: "large" | "small" | "medium";
   children?: ReactNode;
@@ -46,17 +40,15 @@ const ButtonConfirm = ({
 }: PropsTypes) => {
   return (
     <div
-      className={`${styles.container} ${className} ${
-        fullWidth ? styles.fullWidth : ""
+      className={`toast-btn-container${className} ${
+        fullWidth ? "toast-btn-fullWidth" : ""
       }`}
     >
       <button
         {...res}
         disabled={loading || disabled}
         type={type}
-        className={`${styles[color]} ${styles[shape]} ${
-          styles[size]
-        } ${styles.main}`}
+        className={`toast-btn-${color} toast-btn-${shape} toast-btn-${size} toast-btn-main`}
         onClick={onClick}
         style={style}
       >

@@ -1,8 +1,8 @@
 import { FC, ReactNode } from "react";
-import styles from "./Dialog.module.css";
+import "./Dialog.css";
 import { createPortal } from "react-dom";
 
-let rootDialog:any;
+let rootDialog: any;
 type Props = {
   children?: ReactNode;
   open?: boolean;
@@ -32,26 +32,26 @@ const Dialog: FC<Props> = ({
   if (clearScreen && !open) return null;
   return createPortal(
     <div
-      className={`${styles[maxWidth]} ${styles.main} ${
-        open ? styles.open_place_holder : ""
+      className={`sweet-dialog-${maxWidth} sweet-dialog-main ${
+        open ? "sweet-dialog-open-place-holder" : ""
       }`}
     >
-      <div onClick={onClose} className={styles.back_drop}></div>
+      <div onClick={onClose} className="sweet-dialog-back-drop"></div>
       <div
-        className={`${styles.container} ${className} ${
-          open ? styles.open : ""
+        className={`sweet-dialog-container ${className} ${
+          open ? "sweet-dialog-open" : ""
         }`}
       >
-        <div className={styles.sign}>
+        <div className="sweet-dialog-sign">
           <span></span>
         </div>
-        {title && <div className={styles.title}>{title}</div>}
-        {children && <div className={styles.children}>{children}</div>}
+        {title && <div className="sweet-dialog-title">{title}</div>}
+        {children && <div className="sweet-dialog-children">{children}</div>}
         {actions && <div>{actions}</div>}
       </div>
     </div>,
     rootDialog
   );
 };
-export default Dialog
+export default Dialog;
 // export default Dialog;

@@ -1,4 +1,4 @@
-.content {
+.confirm-content {
   font-size: 16px;
   font-weight: 500;
   display: flex;
@@ -6,16 +6,16 @@
   padding: 5px 0px;
 }
 
-.message {
+.confirm-message {
   font-size: 16px !important;
 }
 
-.action {
+.confirm-action {
   padding-top: 10px;
   display: flex;
   column-gap: 10px;
   width: 100%;
 }
-.action:empty {
+.confirm-action:empty {
   padding: 0px;
 }

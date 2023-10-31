@@ -1,6 +1,6 @@
 import { IToastListener } from "../../types";
 import Toast from "../Toast";
-import styles from "./ToastContainer.module.css";
+import "./ToastContainer.css";
 import { FC } from "react";
 type Props = {
   snakes: Array<IToastListener>;
@@ -8,7 +8,7 @@ type Props = {
 
 const ToastContainer: FC<Props> = ({ snakes }) => {
   return (
-    <ul className={`${styles.main}`}>
+    <ul className="sweet-container-main">
       {snakes.map((item, index) => (
         <Toast key={item.id || index} {...item} />
       ))}

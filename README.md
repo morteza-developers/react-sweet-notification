@@ -21,7 +21,7 @@ function App() {
     toast();
   };
   const showConfirm = () => {
-    toast();
+    confirm();
   };
   return (
     <div>

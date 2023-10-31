@@ -1,4 +1,4 @@
-.main {
+.sweet-dialog-main {
   position: fixed;
   top: 0;
   right: 0;
@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-.title {
+.sweet-dialog-title {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -23,7 +23,7 @@
   font-weight: var(--font-500);
   font-size: var(--font-size-16);
 }
-.container {
+.sweet-dialog-container {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -38,7 +38,7 @@
   animation-name: animate_main;
 }
 
-.children {
+.sweet-dialog-children {
   width: 100%;
   height: 100%;
   overflow-y: auto;
@@ -46,20 +46,20 @@
   margin: 10px 0px;
 }
 
-.sm {
+.sweet-dialog-sm {
   max-width: 370px;
 }
-.md {
+.sweet-dialog-md {
   max-width: 500px;
 }
-.lg {
+.sweet-dialog-lg {
   max-width: 650px;
 }
-.xl {
+.sweet-dialog-xl {
   max-width: 800px;
 }
 
-.back_drop {
+.sweet-dialog-back-drop {
   z-index: -99;
   position: fixed;
   width: 100%;
@@ -72,14 +72,14 @@
   background-color: rgba(0, 0, 0, 0.24);
 }
 
-.open_place_holder {
+.sweet-dialog-open-place-holder {
   display: flex;
 }
-.open {
+.sweet-dialog-open {
   animation-name: animate_main;
 }
 
-.sign {
+.sweet-dialog-sign {
   display: none;
   width: 100%;
   height: 15px;
@@ -88,7 +88,7 @@
   margin-bottom: 10px;
 }
 
-.sign > span {
+.sweet-dialog-sign > span {
   height: 3px;
   width: 20px;
   background: var(--color-card);
@@ -116,16 +116,16 @@
 }
 
 @media screen and (max-width: 767px) {
-  .sign {
+  .sweet-dialog-sign {
     display: flex;
   }
-  .main {
+  .sweet-dialog-main {
     bottom: 0;
     max-width: 100%;
     margin: inherit;
   }
 
-  .container {
+  .sweet-dialog-container {
     border-radius: 35px 35px 0px 0px;
     flex-direction: column;
     width: 100%;
