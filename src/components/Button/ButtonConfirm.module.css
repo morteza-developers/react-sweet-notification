@@ -1,0 +1,120 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 20px;
+    text-transform: uppercase;
+    text-shadow: -2px 3px 8px rgb(0 0 0 / 10%);
+    box-shadow: 0px 8px 25px 0px rgb(72 69 90 / 10%);
+    transition: all linear 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .rectangle {
+    border-radius: var(--radius-8);
+  }
+  .circle {
+    border-radius: 50% !important;
+    padding: 0px !important;
+  }
+  .oval {
+    border-radius: 32px !important;
+  }
+  .fullWidth {
+    width: 100%;
+  }
+  .large {
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+    line-height: 44px;
+    padding: 0 20px;
+    font-size: 18px;
+  }
+  .medium {
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    line-height: 35px;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .small {
+    height: 38px;
+    min-height: 38px;
+    min-width: 38px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  
+  .primary {
+    color: var(--color-primary);
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
+  
+  /* //error styless */
+  .error {
+    color: var(--color-danger);
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
+  
+  /* warning  styless */
+  
+  .warning {
+    color: var(--color-warning);
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  
+
+  
+  /* secondary stylesss */
+  
+  .secondary {
+    color: var(--color-secondary);
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
+  
+  /* info styless */
+  .info {
+    color: var(--color-info);
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
+  
+  /* success  styless */
+  
+  .success {
+    color: var(--color-success);
+    background: transparent;
+    box-shadow: none;
+    border: none;
+  }
+  

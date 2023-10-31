@@ -1,0 +1,21 @@
+.content {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.message {
+  font-size: 16px !important;
+}
+
+.action {
+  padding-top: 10px;
+  display: flex;
+  column-gap: 10px;
+  width: 100%;
+}
+.action:empty {
+  padding: 0px;
+}
