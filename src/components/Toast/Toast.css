@@ -25,6 +25,8 @@
   font-size: 14px;
 }
 .sweet-toast-root {
+  font-family: inherit;
+  line-height: 31px;
   display: flex;
   flex-direction: column;
   align-items: center;

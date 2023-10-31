@@ -42,7 +42,7 @@ const Toast: FC<IToastListener> = ({
     <li className="sweet-toast-root">
       {activeBackdrop && <div className="sweet-toast-back-drop"></div>}
       <div className={`sweet-toast-${status} sweet-toast-main`}>
-        <div className="sweet-toast-place_holder">
+        <div className="sweet-toast-place-holder">
           {!isDisableCloseButton && (
             <button onClick={removeToast} className="sweet-toast-close-btn">
               x
