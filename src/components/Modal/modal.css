@@ -1,0 +1,136 @@
+.sweet-dialog-main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 99;
+  display: none;
+  background-color: transparent;
+  height: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.sweet-dialog-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+}
+.sweet-dialog-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  animation-duration: 0.4s;
+  overflow-y: visible;
+  overflow-x: visible;
+  max-height: 80vh;
+  padding: 15px;
+  border-radius: 12px;
+  width: 100%;
+  background-color: #fff;
+  animation-name: animate_main;
+}
+
+.sweet-dialog-children {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: visible;
+  margin: 10px 0px;
+}
+
+.sweet-dialog-sm {
+  max-width: 370px;
+}
+.sweet-dialog-md {
+  max-width: 500px;
+}
+.sweet-dialog-lg {
+  max-width: 650px;
+}
+.sweet-dialog-xl {
+  max-width: 800px;
+}
+
+.sweet-dialog-back-drop {
+  z-index: -99;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(30px);
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.sweet-dialog-open-place-holder {
+  display: flex;
+}
+.sweet-dialog-open {
+  animation-name: animate_main;
+}
+
+.sweet-dialog-sign {
+  display: none;
+  width: 100%;
+  height: 15px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.sweet-dialog-sign > span {
+  height: 3px;
+  width: 20px;
+  background: #8b8b8b;
+  border-radius: 5px;
+}
+
+@keyframes animate_main {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animate_main_mobile {
+  from {
+    bottom: -200%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sweet-dialog-sign {
+    display: flex;
+  }
+  .sweet-dialog-main {
+    bottom: 0;
+    max-width: 100%;
+    margin: inherit;
+  }
+
+  .sweet-dialog-container {
+    border-radius: 35px 35px 0px 0px;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    animation-name: animate_main_mobile;
+  }
+}

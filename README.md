@@ -34,11 +34,16 @@ export default function App() {
 
   const showConfirm = () => {
     confirm("hi my friend it is a confirm", {
-      content: "confirm content",
+      content: ({ onClose }) => "confirm content",
       preConfirm: () =>
         new Promise((res) => {
           setTimeout(() => res(), 4000);
         }),
+    });
+  };
+  const showDialog = () => {
+    confirm("hi my friend it is a simple dialog", {
+      content: ({ onClose }) => "dialog content",
     });
   };
   return (
@@ -48,7 +53,8 @@ export default function App() {
       <button onClick={showErrorToast}>error toast</button>
       <button onClick={showWarningToast}>warning toast</button>
       <button onClick={showInfoToast}>info toast</button>
-      <button onClick={showConfirm}>confirm</button>
+      <button onClick={showConfirm}>show confirm</button>
+      <button onClick={showDialog}>show dialog</button>
     </div>
   );
 }

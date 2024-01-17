@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 import {
   IConfirmListener,
   IConfirmOption,
+  IDialogListener,
+  IDialogOption,
   IToastListener,
   IToastOption,
 } from "./types";
@@ -10,6 +12,7 @@ class NotifyObserver {
   private static _instance: NotifyObserver;
   private toastListener?: (data: IToastListener) => void;
   private confirmListener?: (data: IConfirmListener) => void;
+  private dialogListener?: (data: IDialogListener) => void;
   private snakeHideDuration: number = 4000;
 
   constructor() {
@@ -24,8 +27,8 @@ class NotifyObserver {
   private getUniqueId = () => new Date().getTime() + Math.random() + "_notify";
 
   toast = (
-    content?: string | ReactNode,
-    options: IToastOption = {},
+    content?: string | ReactNode | null,
+    options: IToastOption = {}
   ): string => {
     if (!this.toastListener) return "";
     const id = options.id || this.getUniqueId();
@@ -41,13 +44,26 @@ class NotifyObserver {
 
   confirm = (title: string, options: IConfirmOption = {}): string => {
     if (!this.confirmListener) return "";
-    const id = this.getUniqueId();
+    const id = options.id || this.getUniqueId();
     this.confirmListener({
       title,
-      id,
       type: "confirm",
       close: () => this.closeConfirm(id),
       ...options,
+      id,
+    });
+    return id;
+  };
+
+  dialog = (title: string, options: IDialogOption = {}): string => {
+    if (!this.dialogListener) return "";
+    const id = options.id || this.getUniqueId();
+    this.dialogListener({
+      title,
+      type: "dialog",
+      close: () => this.closeDialog(id),
+      ...options,
+      id,
     });
     return id;
   };
@@ -64,6 +80,15 @@ class NotifyObserver {
         close: () => this.closeConfirm(id),
       });
   };
+  closeDialog = (id: string): void => {
+    if (this.dialogListener)
+      this.dialogListener({
+        id,
+        type: "closeDialog",
+        close: () => this.closeDialog(id),
+      });
+  };
+
   toastRegister = (callBack: (data: IToastListener) => void): boolean => {
     if (this.toastListener) return false;
     this.toastListener = callBack;
@@ -73,6 +98,12 @@ class NotifyObserver {
   confirmRegister = (callBack: (data: IConfirmListener) => void): boolean => {
     if (this.confirmListener) return false;
     this.confirmListener = callBack;
+    return true;
+  };
+
+  dialogRegister = (callBack: (data: IDialogListener) => void): boolean => {
+    if (this.dialogListener) return false;
+    this.dialogListener = callBack;
     return true;
   };
 }

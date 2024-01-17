@@ -1,7 +1,7 @@
 import "./styles.css";
 import { IConfirmListener } from "../../types";
 import { useState } from "react";
-import Dialog from "../Dialog";
+import Modal from "../Modal";
 import ButtonConfirm from "../Button";
 
 function Confirm({
@@ -76,7 +76,7 @@ function Confirm({
     }
   };
   return (
-    <Dialog
+    <Modal
       actions={
         <div className="confirm-action">
           {showOkButton && (
@@ -106,7 +106,7 @@ function Confirm({
       onClose={handleClose}
     >
       {content && <div className="confirm-content">{content}</div>}
-    </Dialog>
+    </Modal>
   );
 }
 
