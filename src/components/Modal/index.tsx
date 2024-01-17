@@ -1,8 +1,7 @@
 import { FC, ReactNode } from "react";
 import "./modal.css";
-import { createPortal } from "react-dom";
 
-let rootDialog: any;
+// let rootDialog: any;
 type Props = {
   children?: ReactNode;
   open?: boolean;
@@ -24,13 +23,8 @@ const Modal: FC<Props> = ({
   className = "",
   actions,
 }) => {
-  if (!rootDialog) {
-    rootDialog = document.createElement("div");
-    rootDialog.setAttribute("id", "_root_dialog");
-    document.body.appendChild(rootDialog);
-  }
   if (clearScreen && !open) return null;
-  return createPortal(
+  return (
     <div
       className={`sweet-dialog-${maxWidth} sweet-dialog-main ${
         open ? "sweet-dialog-open-place-holder" : ""
@@ -49,9 +43,7 @@ const Modal: FC<Props> = ({
         {children && <div className="sweet-dialog-children">{children}</div>}
         {actions && <div>{actions}</div>}
       </div>
-    </div>,
-    rootDialog
+    </div>
   );
 };
 export default Modal;
-// export default Dialog;

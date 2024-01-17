@@ -1,19 +1,4 @@
-# react-sweet-notification
-
-A Beautiful, Responsive , Lightweight ,Easy to use, Accessible (Wai-Aria) Replacement For React Notify Boxes Zero Dependencies
-
-## Install
-
-```bash
-npm install react-sweet-notification
-# or, if using yarn
-yarn add react-sweet-notification
-```
-
-## Usage
-
-```jsx
-import { NotifyProvider, toast, confirm ,dialog } from "react-sweet-notification";
+import { NotifyProvider, toast, confirm, dialog } from "../src";
 
 export default function App() {
   const showSuccessToast = () => {
@@ -41,7 +26,7 @@ export default function App() {
         }),
     });
   };
-  
+
   const showDialog = () => {
     dialog("hi my friend it is a simple dialog", {
       content: ({ onClose }) => "dialog content",
@@ -59,23 +44,3 @@ export default function App() {
     </div>
   );
 }
-```
-
-When using the next.js framework, enter like this
-
-```jsx
-import dynamic from "next/dynamic";
-
-const NotifyProvider = dynamic(
-  () => import("react-sweet-notification").then((mod) => mod.NotifyProvider),
-  {
-    ssr: false,
-  }
-);
-```
-
-component in this way
-
-## License
-
-Licensed under MIT

@@ -1,8 +1,7 @@
 import { FC, useEffect, useState } from "react";
-import Confirm from "../Confirm";
 import { IDialogListener } from "../../types";
 import NotifyObserver from "../../notifyObserver";
-import Dialog from "../Modal";
+import Dialog from "components/Dialog";
 
 type Props = {};
 const DialogContainer: FC<Props> = () => {
@@ -33,7 +32,6 @@ const DialogContainer: FC<Props> = () => {
       if (item.type == "closeDialog") removeDialog(item.id);
     });
   }, []);
-
   return (
     <>
       {dialogs.map((item) => (

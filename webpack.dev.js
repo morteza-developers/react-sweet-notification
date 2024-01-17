@@ -7,10 +7,9 @@ require("dotenv").config({ path: "./.env.development" });
 
 const devConfig = (env) => {
   const watch = env?.watch || false;
-  const port = env?.port || process.env.PORT;
   return {
     devtool: "inline-cheap-source-map",
-    entry: path.join(__dirname, "src", "index.tsx"),
+    entry: path.join(__dirname, "demo", "index.tsx"),
     target: "web",
     mode: "development",
     devServer: {
@@ -19,14 +18,14 @@ const devConfig = (env) => {
         "Access-Control-Allow-Methods": "*",
         "Access-Control-Allow-Headers": "*",
       },
-      watchFiles: watch ? ["./src/*"] : undefined,
+      watchFiles: watch ? ["./src/*", "./demo/*"] : undefined,
       liveReload: watch,
       hot: false,
       open: watch,
       historyApiFallback: true,
-      // static: {
-      //   directory: path.join(__dirname, "public"),
-      // },
+      static: {
+        directory: path.join(__dirname, "public"),
+      },
       client: {
         overlay: {
           errors: true,
@@ -35,10 +34,14 @@ const devConfig = (env) => {
         reconnect: 5,
       },
       compress: true,
-      port: process.env.PORT,
+      port: 3000,
     },
     resolve: {
-      modules: [path.join(__dirname, "src"), "node_modules"],
+      modules: [
+        path.join(__dirname, "src"),
+        path.join(__dirname, "demo"),
+        "node_modules",
+      ],
       extensions: [".css", ".js", ".jsx", ".scss", ".ts", ".tsx"],
     },
 
@@ -46,9 +49,7 @@ const devConfig = (env) => {
       new webpack.DefinePlugin({
         "process.env": JSON.stringify(process.env),
       }),
-      new InterpolateHtmlPlugin({
-        PUBLIC_URL: process.env.PUBLIC_URL,
-      }),
+      new InterpolateHtmlPlugin({}),
     ],
   };
 };

@@ -1,7 +1,7 @@
 import { useEffect, FC } from "react";
-import "./Toast.css";
 import { IToastListener } from "../../types";
 import { closeToast } from "index";
+import "./Toast.css";
 
 const Toast: FC<IToastListener> = ({
   content,

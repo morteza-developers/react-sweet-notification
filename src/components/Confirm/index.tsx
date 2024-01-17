@@ -105,7 +105,7 @@ function Confirm({
       open
       onClose={handleClose}
     >
-      {content && <div className="confirm-content">{content}</div>}
+      {content && <div className="confirm-content">{content({ onClose: handleClose })}</div>}
     </Modal>
   );
 }
